@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalise.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>About Me | Kalkidan Bizuayehu</title>
+  
+  
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">KALKIDAN BIZUAYEHU</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+     <div class="about-wrapper">
+      <section id="intro" class="about-section">
+      <div class="about-text">
+      <h1>About Me</h1>
+      <p> I'm a future focused computer programming student and FinTech enthusiast with a unique background in aviation safety, finance, and customer service. 
+         My journey into tech began in fast-paced, highly regulated environments, where I witnessed the growing need for skilled developers in aviation finance.
+         Motivated by this insight, I chose to pursue formal training in Computer Programming and Analysis at Humber College
+         I've since immersed myself in core technologies including Java, HTML, CSS, and Operating Systems and I continue to grow each day as a lifelong learner.
+      </p>
+    </div>
+     </section>
+
+    <section id="bio" class="about-section">
+      <h2>What I Bring</h2>
+      <p>
+       I combine formal technical training with years of hands-on experience in service oriented roles. This unique blend gives me more than a solid foundation in coding it equips me with resilience, empathy, and a collaborative mindset essential for success in today's digital teams.
+       I'm also passionate about giving back. As a volunteer with the Horn of African Elders Association, I mentor elders on digital literacy and online safety. This initiative in partnership with
+       <a href="https://www.connectedcanadians.ca" target="_blank" rel="noopener">Connected Canadians</a>, reflects my belief that technology should empower everyone, not just a select few.
+       I also hold certifications in Artificial Intelligence and Agile Project Management, which complement my practical skills with a strong understanding of modern development practices and emerging technologies.
+        Outside of code, I'm an avid reader and explorer. Whether diving into personal development books or historical fiction, or planning my next adventure, I bring curiosity, care, and commitment to everything I do.
+       </p>
+    </section>
+    </div>
+
+    <section id="slider" class="slider-section">
+  <h2>Snapshots of My Journey</h2>
+  <div class="slider-container">
+    <div class="slider-track">
+      <img src="image/Agile.jpeg" alt=" Agile Certificate 1" />
+      <img src="image/AI.jpeg" alt=" AI Certificate 2" />
+      <img src="image/conectedCa.JPG" alt="Kalkidan recived recogntion for her Volunteering work" />
+    </div>
+    <button class="slider-btn prev">&#10094;</button>
+    <button class="slider-btn next">&#10095;</button>
+   </div>
+  </section>
+  </main>
+  
+  <script>
+  const track = document.querySelector('.slider-track');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+
+  let index = 0;
+  const slides = document.querySelectorAll('.slider-track img');
+  const totalSlides = slides.length;
+
+  function updateSlider() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % totalSlides;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + totalSlides) % totalSlides;
+    updateSlider();
+  });
+</script>
+
+
+  <footer>
+    <p>&copy; 2025 Kalkidan Bizuayehu. All rights reserved.</p>
+     <div class="social-links">
+    <a href="https://github.com/kalkidan602" target="_blank" aria-label="GitHub">
+  <i class="fab fa-github"></i>
+</a>
+
+    <a href="https://www.linkedin.com/in/YourLinkedInUsername" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+  </div>
+  </footer>
+
+</body>
+</html>
